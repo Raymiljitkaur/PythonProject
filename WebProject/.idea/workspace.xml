@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d676dcd1-d89c-4f5b-8e6b-7f0f1c205953" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Library/Library/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/Library/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/Library/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/Library/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/Library/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/librarian/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/librarian/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/librarian/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/librarian/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/librarian/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/librarian/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Library/librarian/views.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1djlFiVQS8AmPJc3JtwcNtqrvus" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d676dcd1-d89c-4f5b-8e6b-7f0f1c205953" name="Default Changelist" comment="" />
+      <created>1592946283987</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592946283987</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1592946368513">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592946368513" />
+  </component>
+</project>

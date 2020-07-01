@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+
+
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
+
+    <!-- Title -->
+    <title>..:: Toronto Library ::..</title>
+
+
+    <!-- first load django static tag. -->
+    {% load static %}
+
+    <!-- Favicon -->
+    <link href="{% static '/images/favicon.ico' %}" rel="icon" type="image/x-icon" />
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CLato:100,100i,300,300i,400,400i,700,700i,900,900i"
+        rel="stylesheet" />
+    <link href="{% static '/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
+
+    <!-- Mobile Menu -->
+    <link href="{% static '/css/mmenu.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static '/css/mmenu.positioning.css' %}" rel="stylesheet" type="text/css" />
+
+    <!-- Stylesheet -->
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+
+    <!-- Start: Header Section -->
+    <header id="header-v1" class="navbar-wrapper">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-default">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="navbar-header">
+                                <div class="navbar-brand">
+                                    <h1>
+                                        <a href="{% url 'home' %}">
+                                            <img src="{% static 'images/libraria-logo-v1.png' %}"
+                                                alt="toronto library" />
+                                        </a>
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <!-- Header Topbar -->
+                            <div class="header-topbar hidden-sm hidden-xs">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="topbar-info">
+                                            <a href="tel: +1-416-875-0039"><i class="fa fa-phone"></i>416-875-0039</a>
+                                            <span>/</span>
+                                            <a href="mailto:mounica.sykam@gmail.com"><i
+                                                    class="fa fa-envelope"></i>torontolibrary.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="navbar-collapse hidden-sm hidden-xs">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <a href="{% url 'home' %}">Home</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'list_books' %}">Books</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'list_categories' %}">Categories</a>
+
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'issuedbooks' %}">Issued Books</a>
+
+                                    </li>
+
+                                    <li>
+                                        <a href="{% url 'list_publishers' %}">Printers</a>
+
+                                    </li>
+                                    <li><a href="{% url 'list_patrons' %}">Patrons</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu hidden-lg hidden-md">
+                        <a href="#mobile-menu"><i class="fa fa-navicon"></i></a>
+                        <div id="mobile-menu">
+                            <ul>
+                                <li class="mobile-title">
+                                    <h4>Navigation</h4>
+                                    <a href="#" class="close"></a>
+                                </li>
+                                <li class="dropdown active">
+                                    <a href="{% url 'home' %}">Home</a>
+
+                                </li>
+                                <li class="dropdown">
+                                    <a href="{% url 'list_books' %}">Books</a>
+
+                                </li>
+                                <li class="dropdown">
+                                    <a href="{% url 'list_categories' %}">Categories</a>
+
+                                </li>
+                                <li class="dropdown">
+                                    <a href="{% url 'issuedbooks' %}">Issued Books</a>
+
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="{% url 'list_publishers' %}">Printers</a>
+
+                                </li>
+                                <li><a href="{% url 'list_patrons' %}">Patrons</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- End: Header Section -->
+
+    <!-- Start: Slider Section -->
+    <div data-ride="carousel" class="carousel slide" id="home-v1-header-carousel">
+
+        <!-- Carousel slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <figure>
+                    <img alt="Home Slide" src="{% static 'images/header-slider/home-v1/header-slide.jpg' %}" />
+                </figure>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h3>Learning Anytime, Anywhere!</h3>
+                        <h2>Discover Your Roots</h2>
+                        <p>Did you know you have access to thousands of Books from genre fiction to
+                            non-fiction? Not sure what to read? Check out our Library. All you
+                            need is your library card to begin your reading and listening adventures!</p>
+                        <div class="slide-buttons hidden-sm hidden-xs">
+                            <a href="{% url 'list_books' %}" class="btn btn-primary">Books</a>
+                            <a href="{% url 'list_categories' %}" class="btn btn-default">Categories</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#home-v1-header-carousel" data-slide="prev"></a>
+        <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
+    </div>
+    <!-- End: Slider Section -->
+
+    <!-- Start: Search Section -->
+    <section class="search-filters">
+        <div class="container">
+            <div class="filter-box">
+                <h3>What are you looking for at the library?</h3>
+                <form action="http://libraria.demo.presstigers.com/index.html" method="get">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="form-group">
+                            <label class="sr-only" for="keywords">Search by Keyword</label>
+                            <input class="form-control" placeholder="Search by Keyword" id="keywords" name="keywords"
+                                type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="form-group">
+                            <input class="form-control" type="submit" value="Search">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- End: Search Section -->
+
+    <!-- Start: Welcome Section -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="welcome-wrap">
+                        <div class="welcome-text">
+                            <h2 class="section-title">Welcome to Toronto Library</h2>
+                            <span class="underline left"></span>
+                            <p>A library is organized for use and maintained by a public body, an institution, a
+                                corporation, or a private individual. Public and institutional collections and services
+                                may be intended for use by people who choose not to—or cannot afford to—purchase an
+                                extensive collection themselves, who need material no individual can reasonably be
+                                expected to have, or who require professional assistance with their research. In
+                                addition to providing materials, libraries also provide the services of librarians who
+                                are experts at finding and organizing information and at interpreting information needs.
+                                Libraries often provide quiet areas for studying, and they also often offer common areas
+                                to facilitate group study and collaboration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="facts-counter">
+                        <ul>
+                            <li class="bg-light-green">
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <i class="ebook"></i>
+                                    </div>
+                                    <span>Books<strong class="fact-counter">45780</strong></span>
+                                </div>
+                            </li>
+                            <li class="bg-green">
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <i class="eaudio"></i>
+                                    </div>
+                                    <span>Categories<strong class="fact-counter">50</strong></span>
+                                </div>
+                            </li>
+                            <li class="bg-red">
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <i class="magazine"></i>
+                                    </div>
+                                    <span>Publications<strong class="fact-counter">14450</strong></span>
+                                </div>
+                            </li>
+                            <li class="bg-blue">
+                                <div class="fact-item">
+                                    <div class="fact-icon">
+                                        <i class="videos"></i>
+                                    </div>
+                                    <span>Issued Books<strong class="fact-counter">32450</strong></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="welcome-image"><img alt="Home Slide" src="{% static 'images/welcome-img-home-v1.jpg' %}" /></div>
+    </section>
+    <!-- End: Welcome Section -->
+
+    <!-- Start: Social Network -->
+    <section class="social-network section-padding">
+        <div class="container">
+            <div class="center-content">
+                <h2 class="section-title">Follow Us</h2>
+                <span class="underline center"></span>
+
+            </div>
+            <ul>
+                <li>
+                    <a class="facebook" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-facebook-f"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="twitter" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-twitter"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="google" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-google-plus"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="rss" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-rss"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="linkedin" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-linkedin"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="youtube" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-youtube"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- End: Social Network -->
+
+    <!-- Start: Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div id="footer-widgets">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 widget-container">
+                        <div id="text-2" class="widget widget_text">
+                            <h3 class="footer-widget-title">About Toronto Library</h3>
+                            <span class="underline left"></span>
+                            <div class="textwidget">
+                                The Toronto Library empowers the community to: Read. Learn. Create. Connect. Each
+                                year we offer a wide variety of programs and services and the multicultural and business
+                                communities.
+                            </div>
+                            <address>
+                                <div class="info">
+                                    <i class="fa fa-location-arrow"></i>
+                                    <span>101 maclaulin street, Toronto Ontario</span>
+                                </div>
+                                <div class="info">
+                                    <i class="fa fa-envelope"></i>
+                                    <span><a href="mailto:mounica.sykam@gmail.com">support@torontolibrary.com</a></span>
+                                </div>
+                                <div class="info">
+                                    <i class="fa fa-phone"></i>
+                                    <span><a href="tel:012-345-6789">+ 012-345-6789</a></span>
+                                </div>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 widget-container">
+                        <div id="nav_menu-2" class="widget widget_nav_menu">
+                            <h3 class="footer-widget-title">Quick Links</h3>
+                            <span class="underline left"></span>
+                            <div class="menu-quick-links-container">
+                                <ul id="menu-quick-links" class="menu">
+                                    <li><a href="{% url 'home' %}">Home</a> </li>
+                                    <li><a href="{% url 'list_books' %}">Books</a> </li>
+                                    <li><a href="{% url 'list_categories' %}">Categories</a> </li>
+                                    <li><a href="{% url 'issuedbooks' %}">Issued Books</a> </li>
+                                    <li><a href="{% url 'list_publishers' %}">Printers</a> </li>
+                                    <li><a href="{% url 'list_patrons' %}">Patrons</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix hidden-lg hidden-md hidden-xs tablet-margin-bottom"></div>
+                    <div class="col-md-3 col-sm-6 widget-container">
+                        <div id="text-4" class="widget widget_text">
+                            <h3 class="footer-widget-title">Timing</h3>
+                            <span class="underline left"></span>
+                            <div class="timming-text-widget">
+                                <time datetime="2017-02-13">Mon - Thu: 9 am - 9 pm</time>
+                                <time datetime="2017-02-13">Fri: 9 am - 6 pm</time>
+                                <time datetime="2017-02-13">Sat: 9 am - 5 pm</time>
+                                <time datetime="2017-02-13">Sun: 1 pm - 6 pm</time>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-text col-md-3">
+                        <p>Toronto Library</p>
+                    </div>
+                    <div class="col-md-9 pull-right">
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a> </li>
+                            <li><a href="{% url 'list_books' %}">Books</a> </li>
+                            <li><a href="{% url 'list_categories' %}">Categories</a> </li>
+                            <li><a href="{% url 'issuedbooks' %}">Issued Books</a> </li>
+                            <li><a href="{% url 'list_publishers' %}">Printers</a> </li>
+                            <li><a href="{% url 'list_patrons' %}">Patrons</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End: Footer -->
+
+    <!-- jQuery Latest Version 1.x -->
+    <script type="text/javascript" src="{%static '/js/jquery-1.12.4.min.js' %}"></script>
+
+    <!-- jQuery UI -->
+    <script type="text/javascript" src="{%static '/js/jquery-ui.min.js' %}"></script>
+
+    <!-- jQuery Easing -->
+    <script type="text/javascript" src="{%static '/js/jquery.easing.1.3.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="{%static '/js/bootstrap.min.js' %}"></script>
+
+    <!-- Mobile Menu -->
+    <script type="text/javascript" src="{%static '/js/mmenu.min.js' %}"></script>
+
+    <!-- Harvey - State manager for media queries -->
+    <script type="text/javascript" src="{%static '/js/harvey.min.js' %}"></script>
+
+    <!-- Waypoints - Load Elements on View -->
+    <script type="text/javascript" src="{%static '/js/waypoints.min.js' %}"></script>
+
+    <!-- Facts Counter -->
+    <script type="text/javascript" src="{%static '/js/facts.counter.min.js' %}"></script>
+
+    <!-- MixItUp - Category Filter -->
+    <script type="text/javascript" src="{%static '/js/mixitup.min.js' %}"></script>
+
+    <!-- Owl Carousel -->
+    <script type="text/javascript" src=" {%static '/js/owl.carousel.min.js' %}"></script>
+
+    <!-- Accordion -->
+    <script type="text/javascript" src="{%static '/js/accordion.min.js' %}"></script>
+
+    <!-- Responsive Tabs -->
+    <script type="text/javascript" src="{%static '/js/responsive.tabs.min.js' %}"></script>
+
+    <!-- Responsive Table -->
+    <script type="text/javascript" src="{%static '/js/responsive.table.min.js' %}"></script>
+
+    <!-- Masonry -->
+    <script type="text/javascript" src="{%static '/js/masonry.min.js' %}"></script>
+
+    <!-- Carousel Swipe -->
+    <script type="text/javascript" src="{%static '/js/carousel.swipe.min.js' %}"></script>
+
+    <!-- bxSlider -->
+    <script type="text/javascript" src="{%static '/js/bxslider.min.js' %}"></script>
+
+    <!-- Custom Scripts -->
+    <script type="text/javascript" src="{%static '/js/main.js' %}"></script>
+
+</body>
+
+
+</html>

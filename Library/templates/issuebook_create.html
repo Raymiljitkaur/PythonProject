@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 style="color: blue;">Issue Book</h1>
+    <form action="{% url 'issuebook_create' %}" method="post">
+        {% csrf_token %}
+      
+        {{ form.as_p }}
+        <button type="submit"> Issue Book</button>>
+        <!--a href="{% url 'issuedbooks' %}"> Back To List</a-->
+    </form>
+
+ <!--   {% if msg %}
+    <h2>{{ msg }}</h2>
+    {% endif %}
+-->
+</body>
+</html>
